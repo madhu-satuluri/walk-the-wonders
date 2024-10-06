@@ -1,24 +1,40 @@
-import logo from './logo.svg';
-import './App.css';
+
+// import './App.css';
+// import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+ import TripSelection from "./components/Tripselection";
+import VirtualTour from "./components/VirtualTour";
+import Quiz from "./components/Quiz";
+
+// function App() {
+//   return (
+
+// <Router>
+// <Routes>
+//   <Route path="/" exact component={TripSelection} />
+//   <Route path="/tour/:tourId" component={VirtualTour} />
+// </Routes>
+// </Router>
+//   );
+// }
+
+// export default App;
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+
+function About() {
+  return <h1>About Page</h1>;
+}
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<TripSelection />} />
+        <Route path="/tour/:tourId" element={<VirtualTour />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/quiz" element={<Quiz />} />
+      </Routes>
+    </Router>
   );
 }
 

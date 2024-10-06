@@ -36,3 +36,18 @@
     transform: rotate(360deg);
   }
 }
+
+.tour-list {
+  display: flex;
+  justify-content: space-around;
+}
+.tour {
+  border: 1px solid #ccc;
+  padding: 20px;
+  width: 45%;
+}
+.tour img {
+  width: 100%;
+  height: auto;
+}
+

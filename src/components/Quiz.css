@@ -1,0 +1,40 @@
+.quiz-container {
+  background-color: rgb(175, 229, 229);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  max-width: 600px; /* Set a max width for the quiz */
+  margin: auto; /* Center the quiz on the page */
+}
+
+.quiz-title {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.question-container {
+  margin-bottom: 15px;
+}
+
+.quiz-container button {
+    background-color: #007BFF; /* Bootstrap primary color */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    margin: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  /* Hover effect for buttons within the quiz */
+  .quiz-container button:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+  }
+  
+  /* Disabled button styles */
+  .quiz-container button:disabled {
+    background-color: #A9A9A9; /* Grey when disabled */
+    cursor: not-allowed;
+  }

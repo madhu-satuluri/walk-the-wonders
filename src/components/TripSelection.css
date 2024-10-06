@@ -1,0 +1,101 @@
+/* Container that holds the whole layout */
+.trip-selection-container {
+    display: flex;
+    color: azure;
+    flex-direction: row; /* Ensures the content is laid out horizontally */
+    justify-content: space-between;
+    align-items: stretch;
+    height: 100vh; 
+  }
+  
+  /* Style for the left and right image sections */
+  .image-section {
+    flex: 2; /* Each section takes up 1 part of the space */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .left {
+    background-color: #f0f0f0;
+  }
+  
+  .right {
+    background-color: #e0e0e0;
+  }
+  
+  .side-image {
+    width: 100%; /* Adjust size of image as needed */
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+  
+  /* Style for the middle content */
+  .trip-content {
+    flex: 2; 
+    display: flex;
+    color: azure;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background-image: linear-gradient(to bottom, #30656c, #467c81, #729c51,#729c51, #000000);
+    padding: 20px;
+    overflow-y: auto; /* scrollable vertically */
+    height: 100vh; 
+    box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.2); 
+  }
+
+  /* Hide the scrollbar */
+.trip-content::-webkit-scrollbar {
+    width: 0px;
+    background: transparent; 
+  }
+  
+  h1 {
+    margin-bottom: 20px;
+    font-size: 2rem;
+    color: white;
+  }
+  
+  /* Styles for the trip cards */
+  .trip-selection {
+    display: flex;
+    flex-direction: column; /* Stack the cards vertically */
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .trip-selection .trip-card {
+  background-color: rgba(255, 255, 255, 0.7); 
+  padding: 20px;
+  margin: 10px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  width: 250px;
+}
+.trip-card.first-card {
+    background-color: #ffcccb; /* Light red for the first card */
+  }
+  .trip-card.second-card {
+    background-color: #add8e6; /* Light blue for the second card */
+  }
+  .trip-card:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+  }
+  
+  .trip-image {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .trip-link {
+    text-decoration: none;
+    color: inherit;
+  }
+  
